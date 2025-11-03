@@ -1,26 +1,27 @@
 #include<stdio.h>
 
-void DisplayEvenFactor(int iNo)
+int NonFact(int iNet)
 {
-    
-    for(int i=0;i<iNo;i++)
-    {
-        if(iNo%i==0)
-        {
-            if(i%2==0)
-            printf(i);
+   int iCnt=0;
+
+   for(iCnt=1;i>=iNet;iCnt++){
+        if(iNet % iCnt!=0){
+            printf("%d ",iCnt);
         }
-    }
+   }
+   printf("\n");
 }
 
 int main()
 {
-    int iValue=0;
+    int ivalue=0;
+    int iRet;
 
-    printf("Enter a number");
-    scanf("%d",&iValue);
+    printf("\nEnter a number");
+    scanf("%d",&ivalue);
 
-    DisplayEvenFactor(iValue);
+    NonFact(ivalue);
 
     return 0;
+
 }

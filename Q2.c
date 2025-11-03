@@ -1,25 +1,27 @@
 #include<stdio.h>
 
-void DisplayFactor(int iNo)
+int FactRev(int iNet)
 {
-    
-    for(int i=0;i<iNo;i++)
-    {
-        if(iNo%i==0)
-        {
-            printf("%d",i);
+   int iCnt=0;
+
+   for(iCnt=iNet;i>=1;iCnt--){
+        if(iNet % iCnt ==0){
+            printf("%d ",iCnt);
         }
-    }
+   }
+   printf("\n");
 }
 
 int main()
 {
-    int iValue=0;
+    int ivalue=0;
+    int iRet;
 
-    printf("Enter a number");
-    scanf("%d",&iValue);
+    printf("\nEnter a number");
+    scanf("%d",&ivalue);
 
-    DisplayFactor(iValue);
+    FactRev(ivalue);
 
     return 0;
+
 }

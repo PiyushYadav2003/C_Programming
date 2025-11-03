@@ -1,18 +1,28 @@
 #include<stdio.h>
 
-void DisplayConvert(int iNo)
+int SumNonFact(int iNet)
 {
-    
+   int iCnt=0,iSum=0;
+
+   for(iCnt=1;i>=iNet;iCnt++){
+        if(iNet % iCnt!=0){
+            iSum=iSum+iCnt;
+        }
+   }
+   return iSum;
 }
 
 int main()
 {
-    char cvalue;
+    int ivalue=0;
+    int iRet;
 
-    printf("Enter a number");
-    scanf("%c",&cvalue);
+    printf("\nEnter a number");
+    scanf("%d",&ivalue);
 
-    DisplayConvert(cvalue);
+    iRet=SumNonFact(ivalue);
+
+    printf("Sum of Non-factor: %d",iRet);
 
     return 0;
 }

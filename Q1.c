@@ -1,28 +1,32 @@
 #include<stdio.h>
 
-void PrintEven(int iNo)
+int MultiFact(int iNet)
 {
-    
-    if(iNo<=0)
-        return;
+    int iSum=0;
+    int i;
 
-    for(int i=0;i<7;i++)
+    for(i=0;i<=iNet;i++)
     {
-        if(iNo%2==0)
+        if(iNet%i==0)
         {
-             printf("%d",iNo);
-        }   
+            iSum=iSum*i;
+        }
     }
+
+    return iSum;
 }
 
 int main()
 {
-    int iValue=0;
+    int ivalue=0;
+    int iRet;
 
-    printf("Enter a number");
-    scanf("%d",&iValue);
+    printf("\nEnter a number");
+    scanf("%d",&ivalue);
 
-    PrintEven(iValue);
+    iRet = MultiFact(ivalue);
+    printf("%d",iRet);
 
     return 0;
+
 }

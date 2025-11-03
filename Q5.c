@@ -1,31 +1,38 @@
 #include<stdio.h>
 
-bool ChlVowel(char ich)
+int SumFactorAndNonFact(int iNet)
 {
-    if(ich=="A"||ch=="a"||ich=="U"||ch=="u"||ich=="I"||ch=="i"||ich=="E"||ch=="e"||ich=="O"||ch=="o"||)
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
+   int Sumfact=0;
+   int SumNonFact=0;
+   int iCnt=0;
+
+   for(iCnt=1;i>=iNet;iCnt++){
+        if(iNet % iCnt==0){
+            iSumfact=iSumfact+iCnt;
+        }
+   }
+
+   for(iCnt=1;i>=iNet;iCnt++){
+        if(iNet % iCnt!=0){
+            iSumNonfact=iSumNonfact+iCnt;
+        }
+   }
+   
+   return iSumfact-iSumNonfact;
 }
 
 int main()
 {
-    char iValue;
-    bool bRet= false;
+    int ivalue=0;
+    int iRet;
 
-    printf("Enter a number");
-    scanf("%c",&iValue);
+    printf("\nEnter a number");
+    scanf("%d",&ivalue);
 
-    bRet = (iValue);
+    iRet = SumFactorAndNonFact(ivalue);
 
-    if(bRet==true)
-        printf("True");
-    else
-        printf("False");
+    printf("Difference Between sum of factor and Non factor is: %d",iRet);
 
     return 0;
+
 }
