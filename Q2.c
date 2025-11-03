@@ -1,27 +1,23 @@
 #include<stdio.h>
 
-int FactRev(int iNet)
+void FindMax(int a,int b)
 {
-   int iCnt=0;
-
-   for(iCnt=iNet;i>=1;iCnt--){
-        if(iNet % iCnt ==0){
-            printf("%d ",iCnt);
-        }
-   }
-   printf("\n");
+    if(a>b)
+        return a;
+    else
+        return b;
 }
 
 int main()
 {
-    int ivalue=0;
-    int iRet;
+    int num1,num2;
+    int result;
 
-    printf("\nEnter a number");
-    scanf("%d",&ivalue);
+    printf("Enter two number")
+    scanf("%d%d",&num1,&num2);
 
-    FactRev(ivalue);
+    result = FindMax(num1,num2);
+    printf("Maximun number is %d",result);
 
     return 0;
-
 }

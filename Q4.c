@@ -1,28 +1,24 @@
 #include<stdio.h>
 
-int SumNonFact(int iNet)
+void CheckNumberType(int num)
 {
-   int iCnt=0,iSum=0;
-
-   for(iCnt=1;i>=iNet;iCnt++){
-        if(iNet % iCnt!=0){
-            iSum=iSum+iCnt;
-        }
-   }
-   return iSum;
+    if(num>0)
+        printf("Possitive Number");
+    else if(num==0)
+        printf("Zero");
+    else
+        printf("Negative Number")
+       
 }
 
 int main()
 {
-    int ivalue=0;
-    int iRet;
+    int number;
 
-    printf("\nEnter a number");
-    scanf("%d",&ivalue);
+    printf("Enter a number")
+    scanf("%d",&number);
 
-    iRet=SumNonFact(ivalue);
-
-    printf("Sum of Non-factor: %d",iRet);
+    CheckNumberType(number);
 
     return 0;
 }

@@ -1,27 +1,21 @@
 #include<stdio.h>
 
-int NonFact(int iNet)
+void CheckLeap(int year)
 {
-   int iCnt=0;
-
-   for(iCnt=1;i>=iNet;iCnt++){
-        if(iNet % iCnt!=0){
-            printf("%d ",iCnt);
-        }
-   }
-   printf("\n");
+    if((year%4==0 && year%100!=0) || (year%400==0))
+        printf("%d is a leap year",&year);
+    else
+        printf("%d is not a leap year",&year);
 }
 
 int main()
 {
-    int ivalue=0;
-    int iRet;
+    int yr;
 
-    printf("\nEnter a number");
-    scanf("%d",&ivalue);
+    printf("Enter a year")
+    scanf("%d",&yr);
 
-    NonFact(ivalue);
+    CheckLeap(yr);
 
     return 0;
-
 }

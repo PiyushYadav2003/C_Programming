@@ -1,32 +1,21 @@
 #include<stdio.h>
 
-int MultiFact(int iNet)
+void CheckEvenOdd(int num)
 {
-    int iSum=0;
-    int i;
-
-    for(i=0;i<=iNet;i++)
-    {
-        if(iNet%i==0)
-        {
-            iSum=iSum*i;
-        }
-    }
-
-    return iSum;
+    if(num%2==0)
+        printf("%d is Even Number",num);
+    else
+        printf("%d is Odd Number",num);
 }
 
 int main()
 {
-    int ivalue=0;
-    int iRet;
+    int number;
 
-    printf("\nEnter a number");
-    scanf("%d",&ivalue);
+    printf("Enter a number")
+    scanf("%d",&number);
 
-    iRet = MultiFact(ivalue);
-    printf("%d",iRet);
+    CheckEvenOdd(number);
 
     return 0;
-
 }
