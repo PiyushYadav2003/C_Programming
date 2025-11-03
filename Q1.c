@@ -1,21 +1,12 @@
 #include<stdio.h>
 
-void CheckEvenOdd(int num)
-{
-    if(num%2==0)
-        printf("%d is Even Number",num);
-    else
-        printf("%d is Odd Number",num);
-}
-
 int main()
 {
-    int number;
+    char nama[30]
+    printf("Enter the name");
+    scanf(" %c",&name);
 
-    printf("Enter a number")
-    scanf("%d",&number);
-
-    CheckEvenOdd(number);
+    printf("Your Name: %s",name);
 
     return 0;
 }

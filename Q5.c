@@ -1,25 +1,27 @@
 #include<stdio.h>
 
-void FindLarge(int a,int b,int c)
+float Percentage(int a,int b)
 {
-    if(a>b && a>c)
-        return a;
-    if(b>a && b>c)
-        return b;
-    else
-        return c;
-        
+    int ans;
+    ans = (a/b)*100;
+
+    return ans;
 }
 
 int main()
 {
-    int a,b,c,result;
+    int iValue1=0,iValue2=0;
+    float fRet=0.0;
 
-    printf("Enter three number")
-    scanf("%d",&number);
+    printf("Enter total marks");
+    scanf(" %d",&iValue1);
 
-    result=FindLarge(a,b,c);
-    printf("Largest Number is %d",result);
+    printf("Enter marks obtain");
+    scanf(" %d",&iValue2);
+    
+    fRet = Percentage(iValue1,iValue2);
+
+    printf("%d");
 
     return 0;
 }

@@ -1,23 +1,27 @@
 #include<stdio.h>
 
-void FindMax(int a,int b)
+bool ChkGreater(int iValue)
 {
-    if(a>b)
-        return a;
-    else
-        return b;
+    if(no<100)
+        return true;
+    else 
+        return false;
 }
 
 int main()
 {
-    int num1,num2;
-    int result;
+    int iValue;
+    bool bRet = false;
 
-    printf("Enter two number")
-    scanf("%d%d",&num1,&num2);
+    printf("Enter a  number");
+    scanf(" %d",&iValue);
 
-    result = FindMax(num1,num2);
-    printf("Maximun number is %d",result);
+    bRet= ChkGreater(iValue);
+
+    if(bRet==false)
+        printf("Greater");
+    else 
+        printf("Samller");
 
     return 0;
 }

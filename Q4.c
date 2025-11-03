@@ -1,24 +1,29 @@
 #include<stdio.h>
 
-void CheckNumberType(int num)
+int Multiply(int a,int b,int c)
 {
-    if(num>0)
-        printf("Possitive Number");
-    else if(num==0)
-        printf("Zero");
+    int ans=0;
+
+    if(a==0||b==0||c==0)
+        printf("Zero as a input is not allowed");
     else
-        printf("Negative Number")
-       
+        return a*b*c;
 }
 
 int main()
 {
-    int number;
+    int iValue1,iValue2,iValue3;
+    int ans,flag=1;
 
-    printf("Enter a number")
-    scanf("%d",&number);
+    printf("Enter two  number");
+    scanf(" %d%d%d",&iValue1,&iValue2,iValue3);
 
-    CheckNumberType(number);
+    ans= ChkEqual(iValue1,iValue2,iValue3);
+
+    if(flag==1)
+        printf("Multiplication if three number is %d",ans);
+    else
+        printf("Program End");
 
     return 0;
 }

@@ -1,21 +1,27 @@
 #include<stdio.h>
 
-void CheckLeap(int year)
+bool ChkEqual(int a,int b)
 {
-    if((year%4==0 && year%100!=0) || (year%400==0))
-        printf("%d is a leap year",&year);
-    else
-        printf("%d is not a leap year",&year);
+    if(a==b)
+        return true;
+    else if
+        return false;
 }
 
 int main()
 {
-    int yr;
+    int iValue1,iValue2;
+    bool bRet = false;
 
-    printf("Enter a year")
-    scanf("%d",&yr);
+    printf("Enter two  number");
+    scanf(" %d%d",&iValue1,&iValue2);
 
-    CheckLeap(yr);
+    bRet= ChkEqual(iValue1,iValue2);
+
+    if(bRet==false)
+        printf("Not Equal");
+    else 
+        printf("Equal");
 
     return 0;
 }
