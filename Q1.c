@@ -1,27 +1,24 @@
 #include<stdio.h>
 
-void Display(int iNo)
+float CircleArea(float iRadius)
 {
-    int iCnt=0;
+    float ans;
+    ans = 3.14*iRadius*iRadius;
 
-    for(iCnt=0;iCnt<iNo;iCnt++)
-    {
-        printf("*");
-    }
-    for(iCnt=0;iCnt<iNo;iCnt++)
-    {
-        printf("#");
-    }
+    return ans;
 }
 
 int main()
 {
-    int iValue=0,iRet=0;
+    float fValue = 0.0;
+    float dRet=0.0;
 
-    printf("Enter Number");
-    scanf("%d",&iValue);
+    printf("Enter radius");
+    scanf("%f",&fValue);
 
-    Display(iValue);
+    dRet = CircleArea(fValue);
+
+    printf("Area of Circle is %f",dRet);
 
     return 0;
 }

@@ -1,23 +1,24 @@
 #include<stdio.h>
 
-void Display(int iNo)
+float C(float iWidth,float iHeight)
 {
-    int iAns=0;
-    iAns = iNo*70;
+    float ans;
+    ans = iWidth*iHeight;
 
-    return iAns;
+    return ans;
 }
 
 int main()
 {
-    int iValue=0,iRet=0;
+    float fValue1,fValue2 = 0.0;
+    float dRet=0.0;
 
-    printf("Enter number in USD");
-    scanf("%d",&iValue);
+    printf("Enter Height and width");
+    scanf("%f%f",&fValue1,&fValue2);
 
-    iRet = DollarToINR(iValue);
+    dRet = CircleArea(fValue);
 
-    printf("Value in INR is %d",iRet);
+    printf("Area of Circle is %f",dRet);
 
     return 0;
 }

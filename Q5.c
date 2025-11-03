@@ -1,46 +1,24 @@
 #include<stdio.h>
 
-void EvenFactorial(int iNo)
+double SquareMeter(float iNo)
 {
-    int iCnt=0,iSum=0;
+    int ans;
+    ans = iNo*0.0929;
 
-    for(iCnt=0;iCnt<iNo;i++)
-    {
-        if(iCnt%2==0)
-        {
-            iSum = iSum * iCnt;
-        }
-    }
-    return iSum;
-}
-
-void OddFactorial(int iNo)
-{
-    int iCnt=0,iSum=0;
-
-    for(iCnt=0;iCnt<iNo;i++)
-    {
-        if(iCnt%2!=0)
-        {
-            iSum = iSum * iCnt;
-        }
-    }
-    return iSum;
+    return ans;
 }
 
 int main()
 {
-    int iValue=0,iRet1=0,iRet2=0,ans;
+    float fValue = 0.0;
+    double dRet=0.0;
 
-    printf("Enter a number");
-    scanf("%d",&iValue);
+    printf("Enter area in Square feet");
+    scanf("%f",&fValue);
 
-    iRet1 = EvenFactorial(iValue);
-    iRet2 = OddFactorial(iValue);
+    dRet = SquareMeter(fValue);
 
-    ans = iRet1-iRet2;
-
-    printf("Difference Between Factorial is %d",ans);
+    printf("Area in Square Meter is %d",dRet);
 
     return 0;
 }

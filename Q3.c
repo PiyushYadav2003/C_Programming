@@ -1,29 +1,24 @@
 #include<stdio.h>
 
-void EvenFactorial(int iNo)
+float KMtoMeter(float iNo)
 {
-    int iCnt=0,iSum=0;
+    float ans;
+    ans=iNo*1000;
 
-    for(iCnt=0;iCnt<iNo;i++)
-    {
-        if(iCnt%2==0)
-        {
-            iSum = iSum * iCnt;
-        }
-    }
-    return iSum;
+    return ans;
 }
 
 int main()
 {
-    int iValue=0,iRet=0;
+    float fValue = 0.0;
+    float dRet=0.0;
 
-    printf("Enter number in USD");
-    scanf("%d",&iValue);
+    printf("Enter distance in kilometre");
+    scanf("%f",&fValue);
 
-    iRet = EvenFactorial(iValue);
+    dRet = KMtoMeter(fValue);
 
-    printf("Even Factorial is %d",iRet);
+    printf("Distance in metter is %f",dRet);
 
     return 0;
 }
