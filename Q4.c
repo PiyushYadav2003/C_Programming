@@ -1,29 +1,24 @@
 #include<stdio.h>
 
-int Multiply(int a,int b,int c)
+void OddDisplay(int iNo)
 {
-    int ans=0;
+    int iCnt=0;
 
-    if(a==0||b==0||c==0)
-        printf("Zero as a input is not allowed");
-    else
-        return a*b*c;
+    for(iCnt=0;iCnt<=iNo;iCnt++)
+    {
+        if(iNo%2!=0)
+            printf("%d",iCnt);  
+    }
 }
 
 int main()
 {
-    int iValue1,iValue2,iValue3;
-    int ans,flag=1;
+    int iValue=0;
 
-    printf("Enter two  number");
-    scanf(" %d%d%d",&iValue1,&iValue2,iValue3);
+    printf("Enter Number");
+    scanf("%d",&iValue);
 
-    ans= ChkEqual(iValue1,iValue2,iValue3);
-
-    if(flag==1)
-        printf("Multiplication if three number is %d",ans);
-    else
-        printf("Program End");
+    OddDisplay(iValue);
 
     return 0;
 }

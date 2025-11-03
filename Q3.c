@@ -1,27 +1,23 @@
 #include<stdio.h>
 
-bool ChkEqual(int a,int b)
+void Display(int iNo)
 {
-    if(a==b)
-        return true;
-    else if
-        return false;
+    int iCnt=0;
+
+    for(iCnt=-iNo;iCnt<=iNo;iCnt++)
+    {
+        printf("%d",iCnt);   
+    }
 }
 
 int main()
 {
-    int iValue1,iValue2;
-    bool bRet = false;
+    int iValue=0;
 
-    printf("Enter two  number");
-    scanf(" %d%d",&iValue1,&iValue2);
+    printf("Enter Number");
+    scanf("%d",&iValue);
 
-    bRet= ChkEqual(iValue1,iValue2);
-
-    if(bRet==false)
-        printf("Not Equal");
-    else 
-        printf("Equal");
+    Display(iValue);
 
     return 0;
 }

@@ -1,12 +1,24 @@
 #include<stdio.h>
 
+void pattern(int iNo)
+{
+    int iCnt=0;
+
+    for(iCnt=0;iCnt<iNo;iCnt++)
+    {
+        printf("*\t$");
+    }
+
+}
+
 int main()
 {
-    char nama[30]
-    printf("Enter the name");
-    scanf(" %c",&name);
+    int iValue=0;
 
-    printf("Your Name: %s",name);
+    printf("Enter Number");
+    scanf("%d",&iValue);
+
+    pattern(iValue);
 
     return 0;
 }

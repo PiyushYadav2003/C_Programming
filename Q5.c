@@ -1,27 +1,24 @@
 #include<stdio.h>
 
-float Percentage(int a,int b)
+void MultipleDisplay(int iNo)
 {
-    int ans;
-    ans = (a/b)*100;
+    int iCnt=0,iSum=0;
 
-    return ans;
+    for(iCnt=0;iCnt<iNo;iCnt++)
+    {
+         iSum=iCnt*4;
+         printf("%d\t",iSum)  
+    }
 }
 
 int main()
 {
-    int iValue1=0,iValue2=0;
-    float fRet=0.0;
+    int iValue=0;
 
-    printf("Enter total marks");
-    scanf(" %d",&iValue1);
+    printf("Enter Number");
+    scanf("%d",&iValue);
 
-    printf("Enter marks obtain");
-    scanf(" %d",&iValue2);
-    
-    fRet = Percentage(iValue1,iValue2);
-
-    printf("%d");
+    MultipleDisplay(iValue);
 
     return 0;
 }

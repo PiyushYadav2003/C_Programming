@@ -1,27 +1,23 @@
 #include<stdio.h>
 
-bool ChkGreater(int iValue)
+void Display(int iNo)
 {
-    if(no<100)
-        return true;
-    else 
-        return false;
+    int iCnt=0;
+
+    for(iCnt=0;iCnt<iNo;iCnt++)
+    {
+        printf("%d",iCnt);   
+    }
 }
 
 int main()
 {
-    int iValue;
-    bool bRet = false;
+    int iValue=0;
 
-    printf("Enter a  number");
-    scanf(" %d",&iValue);
+    printf("Enter Number");
+    scanf("%d",&iValue);
 
-    bRet= ChkGreater(iValue);
-
-    if(bRet==false)
-        printf("Greater");
-    else 
-        printf("Samller");
+    Display(iValue);
 
     return 0;
 }
