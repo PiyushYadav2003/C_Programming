@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-bool DisplayDigit(int iNo)
+int CountOdd(int iNo)
 {
     int iDigit=0,cnt=0;
 
@@ -10,27 +10,24 @@ bool DisplayDigit(int iNo)
         while(iNo>0)
         {
             iDigit=iNo%10;
-            if(iDigit==0)
-                return true;
+            if(iDigit%2!=0)
+                cnt++;
             iDigit=iNo/10;
         }
-        return false;
+        return cnt++;
 }
 
 int main()
 {
     int ivalue=0;
-    bool bRet=false;
+    int iRet=0;
 
     printf("Enter a number");
     scanf("%d",ivalue);
 
-    bRet = DisplayDigit(ivalue);
+    iRet = CountOdd(ivalue);
 
-    if(bRet==true)
-        printf("It contain Zero");
-    else
-        printf("It does not contain Zero");
+    printf("%d",iRet)
 
     return 0;
 }

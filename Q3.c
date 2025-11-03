@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-int CountTwo(int iNo)
+int CountEven(int iNo)
 {
     int iDigit=0,cnt=0;
 
@@ -10,7 +10,7 @@ int CountTwo(int iNo)
         while(iNo>0)
         {
             iDigit=iNo%10;
-            if(iDigit%2==0)
+            if(iDigit>3 && iDigit<7)
                 cnt++;
             iDigit=iNo/10;
         }
@@ -25,7 +25,7 @@ int main()
     printf("Enter a number");
     scanf("%d",ivalue);
 
-    iRet = CountTwo(ivalue);
+    iRet = CountEven(ivalue);
 
     printf("%d",iRet)
 

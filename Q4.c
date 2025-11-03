@@ -1,8 +1,8 @@
 #include<stdio.h>
 
-int CountTwo(int iNo)
+int Multi(int iNo)
 {
-    int iDigit=0,cnt=0;
+    int iDigit=0,multi=1;
 
     if(iNo<0)
         iNo = -iNo;
@@ -10,8 +10,7 @@ int CountTwo(int iNo)
         while(iNo>0)
         {
             iDigit=iNo%10;
-            if(iDigit%4==0)
-                cnt++;
+            multi=multi*iDigit;
             iDigit=iNo/10;
         }
         return cnt++;
@@ -25,7 +24,7 @@ int main()
     printf("Enter a number");
     scanf("%d",ivalue);
 
-    iRet = CountTwo(ivalue);
+    iRet = Multi(ivalue);
 
     printf("%d",iRet)
 

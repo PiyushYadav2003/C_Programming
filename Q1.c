@@ -1,8 +1,8 @@
 #include<stdio.h>
 
-void DisplayDigit(int iNo)
+int CountEven(int iNo)
 {
-    int iDigit=0;
+    int iDigit=0,cnt=0;
 
     if(iNo<0)
         iNo = -iNo;
@@ -10,19 +10,24 @@ void DisplayDigit(int iNo)
         while(iNo>0)
         {
             iDigit=iNo%10;
-            printf("%d",iDigit);
+            if(iDigit%2==0)
+                cnt++;
             iDigit=iNo/10;
         }
+        return cnt++;
 }
 
 int main()
 {
     int ivalue=0;
+    int iRet=0;
 
     printf("Enter a number");
     scanf("%d",ivalue);
 
-    DisplayDigit(ivalue);
+    iRet = CountEven(ivalue);
+
+    printf("%d",iRet)
 
     return 0;
 }
