@@ -2,38 +2,22 @@
 
 void Display(int iNo)
 {
-    if(iNo==0)
-        printf("Zerp");
-    if(iNo==1)
-        printf("One");
-    if(iNo==2)
-        printf("Two");
-    if(iNo==3)
-        printf("Three");
-    if(iNo==4)
-        printf("Four");
-    if(iNo==5)
-        printf("Five");
-    if(iNo==6)
-        printf("Six");
-    if(iNo==7)
-        printf("Seven");
-    if(iNo==8)
-        printf("Eight");
-    if(iNo==9)
-        printf("Nine");
-    else
-        printf("Invalid");
+    int iAns=0;
+    iAns = iNo*70;
+
+    return iAns;
 }
 
 int main()
 {
-    int iValue=0;
+    int iValue=0,iRet=0;
 
-    printf("Enter Number");
+    printf("Enter number in USD");
     scanf("%d",&iValue);
 
-    Display(iValue);
+    iRet = DollarToINR(iValue);
+
+    printf("Value in INR is %d",iRet);
 
     return 0;
 }

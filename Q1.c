@@ -1,23 +1,27 @@
 #include<stdio.h>
 
-void Number(int iNo)
+void Display(int iNo)
 {
-    if(iNo<50)
-        printf("\nSmall");
-    else if(iNo> 50 && iNo< 100)
-        printf("\nMedium");
-    else
-        printf("\nLarge");
+    int iCnt=0;
+
+    for(iCnt=0;iCnt<iNo;iCnt++)
+    {
+        printf("*");
+    }
+    for(iCnt=0;iCnt<iNo;iCnt++)
+    {
+        printf("#");
+    }
 }
 
 int main()
 {
-    int iValue=0;
+    int iValue=0,iRet=0;
 
     printf("Enter Number");
     scanf("%d",&iValue);
 
-    Number(iValue);
+    Display(iValue);
 
     return 0;
 }
