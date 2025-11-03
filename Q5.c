@@ -1,28 +1,31 @@
 #include<stdio.h>
 
-bool even(int iNo1)
+bool ChlVowel(char ich)
 {
-     if(iNo%2==0)
+    if(ich=="A"||ch=="a"||ich=="U"||ch=="u"||ich=="I"||ch=="i"||ich=="E"||ch=="e"||ich=="O"||ch=="o"||)
+    {
         return true;
+    }
     else
+    {
         return false;
+    }
 }
 
 int main()
 {
-    int iValue1 = 0;
+    char iValue;
     bool bRet= false;
 
     printf("Enter a number");
-    scanf("%d",&iVlaue1);
- 
+    scanf("%c",&iValue);
 
-    bRet=(iValue1);
+    bRet = (iValue);
 
-    if(bRet=true)
-        printf(Even NUmber)
+    if(bRet==true)
+        printf("True");
     else
-        printf("Odd number");
+        printf("False");
 
     return 0;
 }

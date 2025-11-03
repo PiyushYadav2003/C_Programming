@@ -1,25 +1,18 @@
 #include<stdio.h>
 
-void display(int iNo1,int IFrequency)
+void DisplayConvert(int iNo)
 {
-     int i=0;
-
-     fotr(i=0;i<IFrequency;i++)
-     {
-        printf("%d",iNo);
-     }
+    
 }
 
 int main()
 {
-    int iValue1 = 0,iValue2=2;
+    char cvalue;
 
     printf("Enter a number");
-    scanf("%d",&iVlaue1);
-    printf("Enter how number of times ");
-    scanf("%d",&iValue2);
+    scanf("%c",&cvalue);
 
-    display(iValue1,iValue2);
+    DisplayConvert(cvalue);
 
     return 0;
 }

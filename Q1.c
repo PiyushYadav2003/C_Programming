@@ -1,24 +1,28 @@
 #include<stdio.h>
 
-void Accept(int iNo1)
+void PrintEven(int iNo)
 {
-    int iCnt=0;
+    
+    if(iNo<=0)
+        return;
 
-    for(iCnt=0;iCnt<iNo1;iCnt++)
+    for(int i=0;i<7;i++)
     {
-        printf("*");
-    }   
-
+        if(iNo%2==0)
+        {
+             printf("%d",iNo);
+        }   
+    }
 }
 
 int main()
 {
-    int iValue = 0;
+    int iValue=0;
 
     printf("Enter a number");
-    scanf("%d")
+    scanf("%d",&iValue);
 
-    Acceept(iValues);
+    PrintEven(iValue);
 
     return 0;
 }

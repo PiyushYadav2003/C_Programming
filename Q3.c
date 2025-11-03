@@ -1,25 +1,26 @@
 #include<stdio.h>
 
-void display(int iNo1)
+void DisplayEvenFactor(int iNo)
 {
-    if(iNo1<10)
+    
+    for(int i=0;i<iNo;i++)
     {
-        printf("10");
-    }
-    else
-    {
-        printf("DEmo");
+        if(iNo%i==0)
+        {
+            if(i%2==0)
+            printf(i);
+        }
     }
 }
 
 int main()
 {
-    int iValue = 0;
+    int iValue=0;
 
     printf("Enter a number");
-    scanf("%d")
+    scanf("%d",&iValue);
 
-    display(iValues);
+    DisplayEvenFactor(iValue);
 
     return 0;
 }

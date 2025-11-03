@@ -1,21 +1,25 @@
 #include<stdio.h>
 
-void Accept(int iNo1)
+void DisplayFactor(int iNo)
 {
-    for(int i=0;i<iNo1;i++)
+    
+    for(int i=0;i<iNo;i++)
     {
-        printf("*");
-    }   
+        if(iNo%i==0)
+        {
+            printf("%d",i);
+        }
+    }
 }
 
 int main()
 {
-    int iValue = 0;
+    int iValue=0;
 
     printf("Enter a number");
-    scanf("%d")
+    scanf("%d",&iValue);
 
-    Acceept(iValues);
+    DisplayFactor(iValue);
 
     return 0;
 }
