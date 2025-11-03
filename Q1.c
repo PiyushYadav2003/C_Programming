@@ -1,14 +1,13 @@
 #include<stdio.h>
 
-void pattern(int iNo)
+void Number(int iNo)
 {
-    int iCnt=0;
-
-    for(iCnt=0;iCnt<iNo;iCnt++)
-    {
-        printf("*\t$");
-    }
-
+    if(iNo<50)
+        printf("\nSmall");
+    else if(iNo> 50 && iNo< 100)
+        printf("\nMedium");
+    else
+        printf("\nLarge");
 }
 
 int main()
@@ -18,7 +17,7 @@ int main()
     printf("Enter Number");
     scanf("%d",&iValue);
 
-    pattern(iValue);
+    Number(iValue);
 
     return 0;
 }

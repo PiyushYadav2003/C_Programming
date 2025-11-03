@@ -2,12 +2,28 @@
 
 void Display(int iNo)
 {
-    int iCnt=0;
-
-    for(iCnt=0;iCnt<iNo;iCnt++)
-    {
-        printf("%d",iCnt);   
-    }
+    if(iNo==0)
+        printf("Zerp");
+    if(iNo==1)
+        printf("One");
+    if(iNo==2)
+        printf("Two");
+    if(iNo==3)
+        printf("Three");
+    if(iNo==4)
+        printf("Four");
+    if(iNo==5)
+        printf("Five");
+    if(iNo==6)
+        printf("Six");
+    if(iNo==7)
+        printf("Seven");
+    if(iNo==8)
+        printf("Eight");
+    if(iNo==9)
+        printf("Nine");
+    else
+        printf("Invalid");
 }
 
 int main()

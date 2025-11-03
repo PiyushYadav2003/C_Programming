@@ -1,24 +1,24 @@
 #include<stdio.h>
 
-void OddDisplay(int iNo)
+void Table(int iNo)
 {
-    int iCnt=0;
+    int iCnt=0,iSum=0;
 
-    for(iCnt=0;iCnt<=iNo;iCnt++)
+    for(iCnt=1;iCnt<iNo;iCnt++)
     {
-        if(iNo%2!=0)
-            printf("%d",iCnt);  
+        iSum=iNo*iCnt;
+        printf("%d",iSum);
     }
 }
 
 int main()
 {
-    int iValue=0;
+    int iValue=0,iRet=0;
 
     printf("Enter Number");
     scanf("%d",&iValue);
 
-    OddDisplay(iValue);
+    Table(iValue);
 
     return 0;
 }
