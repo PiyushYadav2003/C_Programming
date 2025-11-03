@@ -1,31 +1,23 @@
 #include<stdio.h>
 
-void factor(int number)
+void print_number(int limit)
 {
-    int iCnt=0,iSum=0;
+    int i,sum=0;
 
-    for(iCnt=0;iCnt<number;i++)
-    {
-        if(number%iCnt==0)
-        {
-            if(number%2==0)
-            {
-                iSum=iSum=iCnt;
-            }
-        }
-    }
-    printf("Sum of Even factor of %d is %d",number,iSum);
+    for(i=0;i<limit;i++)
+        sum=sum+i;
 
+    return sum;
 }
 
 int main()
 {
-    int number;
+    int limlt;
 
-    printf("Enter a number");
-    scanf("%d",&number);
+    printf("Enter the number");
+    scanf("%d",&limit);
 
-    factor(number);
+    printf("%d",print_number(limlt));
 
     return 0;
 }

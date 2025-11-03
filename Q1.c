@@ -1,24 +1,21 @@
 #include<stdio.h>
 
-void factor(int number)
+void print_number(int limit)
 {
-    int iCnt=0;
+    int i;
 
-    for(iCnt=0;iCnt<number;i++)
-    {
-        if(number%iCnt==0)
-            printf("%d",iCnt);
-    }
+    for(i=0;i<limit;i++)
+        print("%d",i);
 }
 
 int main()
 {
-    int number;
+    int limlt;
 
-    printf("Enter a number");
-    scanf("%d",&number);
+    printf("Enter the number");
+    scanf("%d",&limit);
 
-    factor(number);
+    print_number(limlt);
 
     return 0;
 }

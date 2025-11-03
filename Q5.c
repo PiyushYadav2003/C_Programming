@@ -1,27 +1,27 @@
 #include<stdio.h>
 
-bool divisible_by_five(int number)
+void print_number(int limit)
 {
-    if(number % 5 ==0)
-        return true;
-    else
-        return false;   
+    int i,sum=0;
+
+    for(i=0;i<limit;i++)
+    {
+        if(i%2==0)
+        {
+            sum=sum+i;
+        }
+    }
+    return sum;
 }
 
 int main()
 {
-    int number;
-    bool bRet=false;
+    int limlt;
 
-    printf("Enter a number");
-    scanf("%d",&number);
+    printf("Enter the number");
+    scanf("%d",&limit);
 
-    bRet = divisible_by_five(number);
-
-    if(bRet==true)
-        printf("%d is divisible by five",number);
-    else
-        printf("%d is not divisible by five",number);
+    printf("%d",print_number(limlt));
 
     return 0;
 }

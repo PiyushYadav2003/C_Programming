@@ -1,30 +1,26 @@
 #include<stdio.h>
 
-void factor(int number)
+void print_number(int limit)
 {
-    int iCnt=0,iCounter;
+    int i;
 
-    for(iCnt=0;iCnt<number;i++)
+    for(i=0;i<limit;i++)
     {
-        if(number%iCnt==0)
+        if(i%2==0)
         {
-            iCounter++;
+            print("%d",i);
         }
     }
-    return iCounter;
 }
 
 int main()
 {
-    int number;
-    int iRet=0;
+    int limlt;
 
-    printf("Enter a number");
-    scanf("%d",&number);
+    printf("Enter the number");
+    scanf("%d",&limit);
 
-    iRet = factor(number);
-
-    printf("Total factor of %d is %d",number,iRet);
+    print_number(limlt);
 
     return 0;
 }
