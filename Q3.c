@@ -1,19 +1,25 @@
 #include<stdio.h>
 
-void display()
+void display(int iNo1)
 {
-    int i=0;
-
-    while(i>=5)
+    if(iNo1<10)
     {
-        printf("%d",i);
-        i++;
+        printf("10");
+    }
+    else
+    {
+        printf("DEmo");
     }
 }
 
 int main()
 {
-    display();
+    int iValue = 0;
+
+    printf("Enter a number");
+    scanf("%d")
+
+    display(iValues);
 
     return 0;
 }

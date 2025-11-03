@@ -1,26 +1,24 @@
 #include<stdio.h>
 
-float Divide(int iNo1,int iNo2)
+void Accept(int iNo1)
 {
-    float iAns;
+    int iCnt=0;
 
-    if(iNo2 == 0)
-        return -1;
-    
-    iAns = iNo1/iNo2;
+    for(iCnt=0;iCnt<iNo1;iCnt++)
+    {
+        printf("*");
+    }   
 
-    return iAns;
-    
 }
 
 int main()
 {
-    float iValue1 = 15, iValue2=5;
-    float iRet;
+    int iValue = 0;
 
-    iRet= Divide(iValue1,iValue2);
+    printf("Enter a number");
+    scanf("%d")
 
-    printf("Divide is %d",iRet);
+    Acceept(iValues);
 
     return 0;
 }

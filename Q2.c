@@ -1,16 +1,21 @@
 #include<stdio.h>
 
-void display()
+void Accept(int iNo1)
 {
-    for(i=1;i<=5;i++)
+    for(int i=0;i<iNo1;i++)
     {
-        printf("Marvellous");
-    }
+        printf("*");
+    }   
 }
 
 int main()
 {
-    display();
+    int iValue = 0;
+
+    printf("Enter a number");
+    scanf("%d")
+
+    Acceept(iValues);
 
     return 0;
 }

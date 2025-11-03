@@ -1,21 +1,25 @@
 #include<stdio.h>
 
-void Check(int iNo1)
+void display(int iNo1,int IFrequency)
 {
-    if(iNo % 5==0)
-        return true;
-    else
-        return false;    
+     int i=0;
 
+     fotr(i=0;i<IFrequency;i++)
+     {
+        printf("%d",iNo);
+     }
 }
 
 int main()
 {
-    int iValue = 0;
-    bool bRet = false;
+    int iValue1 = 0,iValue2=2;
 
     printf("Enter a number");
-    scanf("%d")
+    scanf("%d",&iVlaue1);
+    printf("Enter how number of times ");
+    scanf("%d",&iValue2);
+
+    display(iValue1,iValue2);
 
     return 0;
 }

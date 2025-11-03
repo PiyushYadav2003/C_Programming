@@ -1,22 +1,28 @@
 #include<stdio.h>
 
-void Accept(int iNo1)
+bool even(int iNo1)
 {
-    for(int i=0;i<iNo1;i++)
-    {
-        printf("*");
-    }   
-
+     if(iNo%2==0)
+        return true;
+    else
+        return false;
 }
 
 int main()
 {
-    int iValue = 0;
+    int iValue1 = 0;
+    bool bRet= false;
 
     printf("Enter a number");
-    scanf("%d")
+    scanf("%d",&iVlaue1);
+ 
 
-    Acceept(iValues);
+    bRet=(iValue1);
+
+    if(bRet=true)
+        printf(Even NUmber)
+    else
+        printf("Odd number");
 
     return 0;
 }
