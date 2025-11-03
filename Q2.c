@@ -1,26 +1,36 @@
 #include<stdio.h>
 
-void print_number(int limit)
+bool DisplayDigit(int iNo)
 {
-    int i;
+    int iDigit=0,cnt=0;
 
-    for(i=0;i<limit;i++)
-    {
-        if(i%2==0)
+    if(iNo<0)
+        iNo = -iNo;
+
+        while(iNo>0)
         {
-            print("%d",i);
+            iDigit=iNo%10;
+            if(iDigit==0)
+                return true;
+            iDigit=iNo/10;
         }
-    }
+        return false;
 }
 
 int main()
 {
-    int limlt;
+    int ivalue=0;
+    bool bRet=false;
 
-    printf("Enter the number");
-    scanf("%d",&limit);
+    printf("Enter a number");
+    scanf("%d",ivalue);
 
-    print_number(limlt);
+    bRet = DisplayDigit(ivalue);
+
+    if(bRet==true)
+        printf("It contain Zero");
+    else
+        printf("It does not contain Zero");
 
     return 0;
 }

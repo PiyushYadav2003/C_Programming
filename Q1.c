@@ -1,21 +1,28 @@
 #include<stdio.h>
 
-void print_number(int limit)
+void DisplayDigit(int iNo)
 {
-    int i;
+    int iDigit=0;
 
-    for(i=0;i<limit;i++)
-        print("%d",i);
+    if(iNo<0)
+        iNo = -iNo;
+
+        while(iNo>0)
+        {
+            iDigit=iNo%10;
+            printf("%d",iDigit);
+            iDigit=iNo/10;
+        }
 }
 
 int main()
 {
-    int limlt;
+    int ivalue=0;
 
-    printf("Enter the number");
-    scanf("%d",&limit);
+    printf("Enter a number");
+    scanf("%d",ivalue);
 
-    print_number(limlt);
+    DisplayDigit(ivalue);
 
     return 0;
 }

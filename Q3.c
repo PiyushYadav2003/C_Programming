@@ -1,26 +1,33 @@
 #include<stdio.h>
 
-void print_number(int limit)
+int CountTwo(int iNo)
 {
-    int i;
+    int iDigit=0,cnt=0;
 
-    for(i=0;i<limit;i++)
-    {
-        if(i%2!=0)
+    if(iNo<0)
+        iNo = -iNo;
+
+        while(iNo>0)
         {
-            print("%d",i);
+            iDigit=iNo%10;
+            if(iDigit%2==0)
+                cnt++;
+            iDigit=iNo/10;
         }
-    }
+        return cnt++;
 }
 
 int main()
 {
-    int limlt;
+    int ivalue=0;
+    int iRet=0;
 
-    printf("Enter the number");
-    scanf("%d",&limit);
+    printf("Enter a number");
+    scanf("%d",ivalue);
 
-    print_number(limlt);
+    iRet = CountTwo(ivalue);
+
+    printf("%d",iRet)
 
     return 0;
 }
