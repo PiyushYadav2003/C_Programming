@@ -1,24 +1,34 @@
 #include<stdio.h>
 
-float fhtoCs(float ftemp)
+int RangeSumEven(int iNo1,int iNo2)
 {
-    float ans;
-    ans = ((ftemp-32)*(5/9));
+    int iCnt=0,iSum=0;
 
-    return ans;
+    if(iNo1>iNo2)
+    {
+        for(iCnt=iNo1;iCnt<iNo2;iCnt++)
+        {
+            if(iCnt%2==0)
+                iSum=iSum*iCnt;
+        }
+    }
+    return iSum;   
 }
 
 int main()
 {
-    float fValue = 0.0;
-    float dRet=0.0;
+    int iValue1=0,iValue2=0;
+    iRet=0;
 
-    printf("Enter temperature(In Fahrenheit)");
-    scanf("%f",&fValue);
+    printf("Enter Starting Point");
+    scanf("%d",&iValue1);
+    printf("Enter End Point");
+    scanf("%d",&iValue2);
 
-    dRet = fhtoCs(fValue);
+    iRet = RangeEvenSum(iValue1,iValue2);
 
-    printf("Temperaute in Celsius %f",dRet);
+    printf("Addition of Even number is %d",iRet);
 
     return 0;
+
 }

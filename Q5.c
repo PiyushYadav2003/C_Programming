@@ -1,24 +1,26 @@
 #include<stdio.h>
 
-double SquareMeter(float iNo)
+int RangeDisplay(int iNo1,int iNo2)
 {
-    int ans;
-    ans = iNo*0.0929;
+    int iCnt=0;
 
-    return ans;
+    for(iCnt=iNo2;iCnt<iNo1;iCnt--)
+    {
+        printf("%d ",iCnt);
+    }
 }
 
 int main()
 {
-    float fValue = 0.0;
-    double dRet=0.0;
+    int iValue1=0,iValue2=0;
 
-    printf("Enter area in Square feet");
-    scanf("%f",&fValue);
+    printf("Enter Starting Point");
+    scanf("%d",&iValue1);
+    printf("Enter End Point");
+    scanf("%d",&iValue2);
 
-    dRet = SquareMeter(fValue);
-
-    printf("Area in Square Meter is %d",dRet);
+    RangeDisplay(iValue1,iValue2);
 
     return 0;
+
 }

@@ -1,24 +1,36 @@
 #include<stdio.h>
 
-float KMtoMeter(float iNo)
+int RangeDisplay(int iNo1,int iNo2)
 {
-    float ans;
-    ans=iNo*1000;
+    int iCnt=0,iSum=0;
 
-    return ans;
+    if(iNo1>iNo2)
+    {
+        for(iCnt=iNo1;iCnt<iNo2;iCnt++)
+        {
+            iSum=iSum+iCnt;
+        }
+    }
+    else
+    {
+        printf("\nInvali input");
+    }
+
+    return iSum;
 }
 
 int main()
 {
-    float fValue = 0.0;
-    float dRet=0.0;
+    int iValue1=0,iValue2=0;
+    int iRet=0;
 
-    printf("Enter distance in kilometre");
-    scanf("%f",&fValue);
+    printf("Enter Starting Point");
+    scanf("%d",&iValue1);
+    printf("Enter End Point");
+    scanf("%d",&iValue2);
 
-    dRet = KMtoMeter(fValue);
-
-    printf("Distance in metter is %f",dRet);
+    iRet = RangeDisplay(iValue1,iValue2);
 
     return 0;
+
 }

@@ -1,24 +1,27 @@
 #include<stdio.h>
 
-float C(float iWidth,float iHeight)
+int RangeDisplay(int iNo1,int iNo2)
 {
-    float ans;
-    ans = iWidth*iHeight;
+    int iCnt=0;
 
-    return ans;
+    for(iCnt=iNo1;iCnt<iNo2;iCnt++)
+    {
+        if(iCnt%2==0)
+            printf("%d ",iCnt);
+    }
 }
 
 int main()
 {
-    float fValue1,fValue2 = 0.0;
-    float dRet=0.0;
+    int iValue1=0,iValue2=0;
 
-    printf("Enter Height and width");
-    scanf("%f%f",&fValue1,&fValue2);
+    printf("Enter Starting Point");
+    scanf("%d",&iValue1);
+    printf("Enter End Point");
+    scanf("%d",&iValue2);
 
-    dRet = CircleArea(fValue);
-
-    printf("Area of Circle is %f",dRet);
+    RangeDisplay(iValue1,iValue2);
 
     return 0;
+
 }
