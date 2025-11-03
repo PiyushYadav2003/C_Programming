@@ -1,26 +1,27 @@
 #include<stdio.h>
 
-int RangeDisplay(int iNo1,int iNo2)
+bool divisible_by_five(int number)
 {
-    int iCnt=0;
-
-    for(iCnt=iNo2;iCnt<iNo1;iCnt--)
-    {
-        printf("%d ",iCnt);
-    }
+    if(number % 5 ==0)
+        return true;
+    else
+        return false;   
 }
 
 int main()
 {
-    int iValue1=0,iValue2=0;
+    int number;
+    bool bRet=false;
 
-    printf("Enter Starting Point");
-    scanf("%d",&iValue1);
-    printf("Enter End Point");
-    scanf("%d",&iValue2);
+    printf("Enter a number");
+    scanf("%d",&number);
 
-    RangeDisplay(iValue1,iValue2);
+    bRet = divisible_by_five(number);
+
+    if(bRet==true)
+        printf("%d is divisible by five",number);
+    else
+        printf("%d is not divisible by five",number);
 
     return 0;
-
 }

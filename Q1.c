@@ -1,26 +1,24 @@
 #include<stdio.h>
 
-int RangeDisplay(int iNo1,int iNo2)
+void factor(int number)
 {
     int iCnt=0;
 
-    for(iCnt=iNo1;iCnt<iNo2;iCnt++)
+    for(iCnt=0;iCnt<number;i++)
     {
-        printf("%d ",iCnt);
+        if(number%iCnt==0)
+            printf("%d",iCnt);
     }
 }
 
 int main()
 {
-    int iValue1=0,iValue2=0;
+    int number;
 
-    printf("Enter Starting Point");
-    scanf("%d",&iValue1);
-    printf("Enter End Point");
-    scanf("%d",&iValue2);
+    printf("Enter a number");
+    scanf("%d",&number);
 
-    RangeDisplay(iValue1,iValue2);
+    factor(number);
 
     return 0;
-
 }

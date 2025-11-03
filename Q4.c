@@ -1,34 +1,31 @@
 #include<stdio.h>
 
-int RangeSumEven(int iNo1,int iNo2)
+void factor(int number)
 {
     int iCnt=0,iSum=0;
 
-    if(iNo1>iNo2)
+    for(iCnt=0;iCnt<number;i++)
     {
-        for(iCnt=iNo1;iCnt<iNo2;iCnt++)
+        if(number%iCnt==0)
         {
-            if(iCnt%2==0)
-                iSum=iSum*iCnt;
+            if(number%2==0)
+            {
+                iSum=iSum=iCnt;
+            }
         }
     }
-    return iSum;   
+    printf("Sum of Even factor of %d is %d",number,iSum);
+
 }
 
 int main()
 {
-    int iValue1=0,iValue2=0;
-    iRet=0;
+    int number;
 
-    printf("Enter Starting Point");
-    scanf("%d",&iValue1);
-    printf("Enter End Point");
-    scanf("%d",&iValue2);
+    printf("Enter a number");
+    scanf("%d",&number);
 
-    iRet = RangeEvenSum(iValue1,iValue2);
-
-    printf("Addition of Even number is %d",iRet);
+    factor(number);
 
     return 0;
-
 }

@@ -1,36 +1,30 @@
 #include<stdio.h>
 
-int RangeDisplay(int iNo1,int iNo2)
+void factor(int number)
 {
     int iCnt=0,iSum=0;
 
-    if(iNo1>iNo2)
+    for(iCnt=0;iCnt<number;i++)
     {
-        for(iCnt=iNo1;iCnt<iNo2;iCnt++)
+        if(number%iCnt==0)
         {
-            iSum=iSum+iCnt;
+            iSum=iSum=iCnt;
         }
     }
-    else
-    {
-        printf("\nInvali input");
-    }
-
     return iSum;
 }
 
 int main()
 {
-    int iValue1=0,iValue2=0;
+    int number;
     int iRet=0;
 
-    printf("Enter Starting Point");
-    scanf("%d",&iValue1);
-    printf("Enter End Point");
-    scanf("%d",&iValue2);
+    printf("Enter a number");
+    scanf("%d",&number);
 
-    iRet = RangeDisplay(iValue1,iValue2);
+    iRet = factor(number);
+
+    printf("Sum factor of %d is %d",number,iRet);
 
     return 0;
-
 }
