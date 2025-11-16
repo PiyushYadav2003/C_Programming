@@ -1,22 +1,26 @@
 #include<stdio.h>
 
-int Frequency(int Arr[],int ilenght)
+int FirstOcc(int Arr[],int ilenght,int iNo = 0)
 {
-    int ECount = 0,OCount = 0,iCnt = 0;
+    int loc = -1,iCnt = 0;
 
     for(iCnt = 0; iCnt< ilength; iCnt++)
     {
-        if(Arr[iCnt] % 2 == 0)
-            ECount++;
-        else 
-            OCount++;
+        if(Arr[iCnt] == iNo)
+        {
+            loc = iCnt;
+            braek;
+        }
+        
     }
-    return ECount - OCount;
+   
+    return loc;
 }
+
 
 int main()
 {
-    int iSize = 0,iRet = 0,iCnt = 0,iLength = 0;
+    int iSize = 0,iRet = 0,iCnt = 0,iLength = 0,iValue = 0;
     int *p = NULL;
 
     printf("\nEnter number of elements");
@@ -38,9 +42,15 @@ int main()
         scanf("%d",&p[iCnt]);
     }
 
-    iRet = Frequency(p,iSize);
+    printf("\nEnter the number you want to search");
+    scanf("%d",&iValue);
 
-    printf("\nDifference between Even and Odd : %d",iRet);
+    iRet = FirstOcc(p,iSize,iValue);
+
+    if(iRet == -1)
+        printf("No such element present");
+    else
+        printf("%d is present at %d location",iValue,iRet);
 
 
     free(p);

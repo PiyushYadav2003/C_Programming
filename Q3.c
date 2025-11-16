@@ -1,23 +1,25 @@
 #include<stdio.h>
-#include<stdbool>
 
-bool Check(int Arr[],int ilenght)
+int FirstOcc(int Arr[],int ilenght,int iNo = 0)
 {
-    int Count = 0,iCnt = 0;
+    int loc = -1,iCnt = 0;
 
     for(iCnt = 0; iCnt< ilength; iCnt++)
     {
-        if(Arr[iCnt] ==11)
-            return true;
-        else
-            return false;
+        if(Arr[iCnt] == iNo)
+        {
+            loc = iCnt;
+        }
+        
     }
+   
+    return loc;
 }
+
 
 int main()
 {
-    int iSize = 0,iCnt = 0,iLength = 0;
-    bool bRet = false;
+    int iSize = 0,iRet = 0,iCnt = 0,iLength = 0,iValue = 0;
     int *p = NULL;
 
     printf("\nEnter number of elements");
@@ -39,17 +41,17 @@ int main()
         scanf("%d",&p[iCnt]);
     }
 
-    bRet = Check(p,iSize);
+    printf("\nEnter the number you want to search");
+    scanf("%d",&iValue);
 
-    if(bRet == true)
-    {
-        printf("\n11 is present");
-    }
+    iRet = FirstOcc(p,iSize,iValue);
+
+    if(iRet == -1)
+        printf("No such element present");
     else
-    {
-        printf("\n11 is not present");
-    }
-    
+        printf("%d is present at %d location",iValue,iRet);
+
+
     free(p);
 
     return 0;

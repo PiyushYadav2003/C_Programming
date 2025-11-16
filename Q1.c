@@ -1,20 +1,28 @@
 #include<stdio.h>
+#include<stdbool.h>
 
-int CountEven(int Arr[],int ilenght)
+bool CountEven(int Arr[],int ilenght,int iNo = 0)
 {
     int Count = 0,iCnt = 0;
 
     for(iCnt = 0; iCnt< ilength; iCnt++)
     {
-        if(Arr[iCnt] % 2 == 0)
+        if(Arr[iCnt] % iNo == 0)
             Count++;
     }
-    return Count;
+   
+    if(Count >= 1)
+        return true;
+    else
+        return false;
+
 }
+
 
 int main()
 {
-    int iSize = 0,iRet = 0,iCnt = 0,iLength = 0;
+    int iSize = 0,iCnt = 0,iLength = 0,iValue = 0;
+    bool bRet = false;
     int *p = NULL;
 
     printf("\nEnter number of elements");
@@ -36,9 +44,15 @@ int main()
         scanf("%d",&p[iCnt]);
     }
 
-    iRet = CountEven(p,iSize);
+    printf("\nEnter the number you want to search");
+    scanf("%d",&iValue);
 
-    printf("\nResult : %d",iRet);
+    bRet = CountEven(p,iSize,iValue);
+
+    if(iRet == true)
+        printf("%d is present",iValue);
+    else
+        printf("%d is not present",iValue);
 
 
     free(p);
