@@ -3,27 +3,18 @@
 #include<stdbool.h>
 
 
-int Difference(int Arr[],int iSize)
+void Display(int Arr[],int iSize)
 {
-    int iCnt = 0,iMax = 0,iMin = 0;  
+    int iCnt = 0,iMax = 0,EiSum = 0,OiSum = 0;  
 
     for(iCnt = 0;iCnt < iSize;iCnt++)
     {
-        if(Arr[iCnt] > iMax)
+        if(Arr[iCnt] % 2 == 0)
         {
-            iMax = Arr[iCnt];
-        }
+            if(Arr[iCnt] % 5 == 0)
+                printf("%d",Arr[iCnt]);
+        }    
     }
-
-    for(iCnt = 0;iCnt < iSize;iCnt++)
-    {
-        if(Arr[iCnt] < iMin)
-        {
-            iMin = Arr[iCnt];
-        }
-    }
-
-    return iMax-iMin;
 }
 
 int main()
@@ -49,9 +40,7 @@ int main()
         scanf("%d",&iPtr[iCnt]);
     }
 
-        iRet = Difference(iPtr,iLength);
-    
-    printf("\nDifference is %d",iRet);
+    Display(iPtr,iLength);
 
     free(iPtr);
 

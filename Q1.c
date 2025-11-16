@@ -3,18 +3,23 @@
 #include<stdbool.h>
 
 
-int Maximum(int Arr[],int iSize)
+int Sumition(int Arr[],int iSize)
 {
-    int iCnt = 0,iMax = 0;  
+    int iCnt = 0,iMax = 0,EiSum = 0,OiSum = 0;  
 
     for(iCnt = 0;iCnt < iSize;iCnt++)
     {
-        if(Arr[iCnt] > iMax)
-        {
-            iMax = Arr[iCnt];
-        }
+        if(Arr[iCnt] % 2 == 0)
+            EiSum = EiSum+Arr[iCnt];
     }
-    return iMax;
+
+    for(iCnt = 0;iCnt < iSize;iCnt++)
+    {
+        if(Arr[iCnt] % 2 == 0)
+            EiSum = EiSum+Arr[iCnt];
+    }
+
+    return EiSum - OiSum;
 }
 
 int main()
@@ -40,9 +45,9 @@ int main()
         scanf("%d",&iPtr[iCnt]);
     }
 
-        iRet = Maximum(iPtr,iLength);
+    iRet = Sumition(iPtr,iLength);
     
-    printf("\nMaximum number is %d",iRet);
+    printf("\nDifference in even and odd Sumition of number is %d",iRet);
 
     free(iPtr);
 

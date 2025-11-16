@@ -3,22 +3,23 @@
 #include<stdbool.h>
 
 
-void Digit(int Arr[],int iSize)
+void Display(int Arr[],int iSize)
 {
-    int iCnt = 0;  
+    int iCnt = 0,iMax = 0,EiSum = 0,OiSum = 0;  
 
-    for(iCnt = 0;iCnt < iSize; iCnt++)
+    for(iCnt = 0;iCnt < iSize;iCnt++)
     {
-        if(Arr[iCnt] >= 100 && Arr[iCnt] <= 999)
+        if(Arr[iCnt] % 3 == 0)
         {
-            printf("%d",Arr[iCnt]);
-        }
+            if(Arr[iCnt] % 5 == 0)
+                printf("%d",Arr[iCnt]);
+        }    
     }
 }
 
 int main()
 {
-    int iLength = 0,iCnt = 0;
+    int iLength = 0,iCnt = 0,iRet = 0;
     int *iPtr = NULL;
 
     printf("\nEnter the total number of elements");
@@ -39,7 +40,7 @@ int main()
         scanf("%d",&iPtr[iCnt]);
     }
 
-    Digit(iPtr,iLength);
+    Display(iPtr,iLength);
 
     free(iPtr);
 

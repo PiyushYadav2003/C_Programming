@@ -3,15 +3,17 @@
 #include<stdbool.h>
 
 
-int Sumition(int Arr[],int iSize)
+void Display(int Arr[],int iSize)
 {
-    int iCnt = 0,iMax = 0,iSum = 0;  
+    int iCnt = 0,iMax = 0,EiSum = 0,OiSum = 0;  
 
     for(iCnt = 0;iCnt < iSize;iCnt++)
     {
-        iSum+=Arr[iCnt];
+        if(Arr[iCnt] % 11 == 0)
+            printf("%d",Arr[iCnt]);   
     }
-    return iSum;
+
+    return EiSum - OiSum;
 }
 
 int main()
@@ -37,9 +39,7 @@ int main()
         scanf("%d",&iPtr[iCnt]);
     }
 
-        iRet = Sumition(iPtr,iLength);
-    
-    printf("\nSumition of number is %d",iRet);
+    Display(iPtr,iLength);
 
     free(iPtr);
 
