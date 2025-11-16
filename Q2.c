@@ -1,59 +1,50 @@
 #include<stdio.h>
+#include<stdlib.h>
+#include<stdbool.h>
 
-int FirstOcc(int Arr[],int ilenght,int iNo = 0)
+
+int Minimum(int Arr[],int iSize)
 {
-    int loc = -1,iCnt = 0;
+    int iCnt = 0,iMin = 0;  
 
-    for(iCnt = 0; iCnt< ilength; iCnt++)
+    for(iCnt = 0;iCnt < iSize;iCnt++)
     {
-        if(Arr[iCnt] == iNo)
+        if(Arr[iCnt] < iMin)
         {
-            loc = iCnt;
-            braek;
+            iMin = Arr[iCnt];
         }
-        
     }
-   
-    return loc;
+    return iMax;
 }
-
 
 int main()
 {
-    int iSize = 0,iRet = 0,iCnt = 0,iLength = 0,iValue = 0;
-    int *p = NULL;
+    int iLength = 0,iCnt = 0,iRet = 0;
+    int *iPtr = NULL;
 
-    printf("\nEnter number of elements");
-    scanf("%d",&iSize);
+    printf("\nEnter the total number of elements");
+    scanf("%d",&iLength);
+    
+    iPtr = (int*)malloc(iLength * sizeof(int));
 
-    p = (int*)malloc(iSize * sizeof(int));
-
-    if(NULL == p)
+    if(NULL == iPtr)
     {
-        printf("Unable to allocate memery")
+        printf("\nUnable to allocate the memory");
         return -1;
     }
 
-    printf("\nEnter %d elemnts",iLength);
+    printf("\nEnter the Element:\n");
 
-    for(iCnt = 0;iCnt <iLenght; iCnt++)
+    for(iCnt = 0;iCnt<iLength;iCnt++)
     {
-        printf("Enter Elements: %d",iCnt+1);
-        scanf("%d",&p[iCnt]);
+        scanf("%d",&iPtr[iCnt]);
     }
 
-    printf("\nEnter the number you want to search");
-    scanf("%d",&iValue);
+        iRet = Minimum(iPtr,iLength);
+    
+    printf("\nMinimum number is %d",iRet);
 
-    iRet = FirstOcc(p,iSize,iValue);
-
-    if(iRet == -1)
-        printf("No such element present");
-    else
-        printf("%d is present at %d location",iValue,iRet);
-
-
-    free(p);
+    free(iPtr);
 
     return 0;
 }

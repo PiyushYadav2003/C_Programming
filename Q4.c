@@ -1,51 +1,47 @@
 #include<stdio.h>
+#include<stdlib.h>
+#include<stdbool.h>
 
-void  Range(int Arr[],int ilenght,int iStart,int iEnd)
+
+void Digit(int Arr[],int iSize)
 {
-    int loc = -1,iCnt = 0;
+    int iCnt = 0;  
 
-    for(iCnt = 0; iCnt< ilength; iCnt++)
+    for(iCnt = 0;iCnt < iSize; iCnt++)
     {
-        if(Arr[iCnt] >= iStart &7 Arr[iCnt] <= iEnd)
+        if(Arr[iCnt] >= 100 && Arr[iCnt] <= 999)
         {
-           print("\n%d",Arr[iCnt]);
-        }  
+            printf("%d",Arr[iCnt]);
+        }
     }
 }
 
-
 int main()
 {
-    int iSize = 0,iRet = 0,iCnt = 0,iLength = 0,iValue1 = 0,iValue2 = 0;
-    int *p = NULL;
+    int iLength = 0,iCnt = 0;
+    int *iPtr = NULL;
 
-    printf("\nEnter number of elements");
-    scanf("%d",&iSize);
+    printf("\nEnter the total number of elements");
+    scanf("%d",&iLength);
+    
+    iPtr = (int*)malloc(iLength * sizeof(int));
 
-    printf("Enter Starting point");
-    scanf("%d",&iValue1);
-
-    printf("Enter End point");
-    scanf("%d",&iValue2);
-
-    p = (int*)malloc(iSize * sizeof(int));
-
-    if(NULL == p)
+    if(NULL == iPtr)
     {
-        printf("Unable to allocate memery")
+        printf("\nUnable to allocate the memory");
         return -1;
     }
 
+    printf("\nEnter the Element:\n");
 
-    for(iCnt = 0;iCnt <iSize; iCnt++)
+    for(iCnt = 0;iCnt<iLength;iCnt++)
     {
-        printf("Enter Elements: %d",iCnt+1);
-        scanf("%d",&p[iCnt]);
+        scanf("%d",&iPtr[iCnt]);
     }
 
-    iRet = Range(p,iSize,iValue);
+    Digit(iPtr,iLength);
 
-    free(p);
+    free(iPtr);
 
     return 0;
 }
